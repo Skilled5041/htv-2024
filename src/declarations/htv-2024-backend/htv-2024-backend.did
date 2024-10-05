@@ -12,6 +12,5 @@ service : {
   createPost: (vec blob, text, text, text) -> ();
   getAllPostSnapshots: () -> (vec PostSnapshot) query;
   getPostSnapshot: (nat) -> (PostSnapshot) query;
-  getTopPostSnapshots: () -> (vec PostSnapshot) query;
   likePost: (nat) -> ();
 }
