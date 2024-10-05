@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { htv_2024_backend } from "declarations/htv-2024-backend";
 import { Button } from "@nextui-org/react";
+import Navigation from "./components/Navbar";
 
 function App() {
   const [greeting, setGreeting] = useState("");
@@ -16,19 +17,7 @@ function App() {
 
   return (
     <main>
-      <Button color="primary">Button</Button>
-      {/* <img src="/logo2.svg" alt="DFINITY logo" />
-      <br />
-      <br /> */}
-      <form action="#" onSubmit={handleSubmit}>
-        <label htmlFor="name">Enter your name: &nbsp;</label>
-        <input id="name" alt="Name" type="text" />
-        <button className="" type="submit">
-          Click Me!
-        </button>
-        <h1 className="font-semibold flex ">HTV 2024</h1>
-      </form>
-      <section id="greeting">{greeting}</section>
+      <Navigation />
     </main>
   );
 }
