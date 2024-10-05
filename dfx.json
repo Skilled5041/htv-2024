@@ -1,0 +1,26 @@
+{
+  "canisters": {
+    "htv-2024-backend": {
+      "main": "src/htv-2024-backend/main.mo",
+      "type": "motoko"
+    },
+    "htv-2024-frontend": {
+      "dependencies": [
+        "htv-2024-backend"
+      ],
+      "source": [
+        "src/htv-2024-frontend/dist"
+      ],
+      "type": "assets",
+      "workspace": "htv-2024-frontend"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
