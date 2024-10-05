@@ -16,17 +16,14 @@ function App() {
 
   return (
     <main>
-      <Button color="primary">Button</Button>
-      {/* <img src="/logo2.svg" alt="DFINITY logo" />
-      <br />
-      <br /> */}
+      <Button color="primary">Button</Button> {/* NextUI Button */}
       <form action="#" onSubmit={handleSubmit}>
         <label htmlFor="name">Enter your name: &nbsp;</label>
         <input id="name" alt="Name" type="text" />
         <button className="" type="submit">
           Click Me!
         </button>
-        <h1 className="font-semibold flex ">HTV 2024</h1>
+        <div className="font-semibold flex ">HTV 2024</div>
       </form>
       <section id="greeting">{greeting}</section>
     </main>
