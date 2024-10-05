@@ -1,5 +1,6 @@
 export const idlFactory = ({ IDL }) => {
-  const Post = IDL.Record({
+  const PostSnapshot = IDL.Record({
+    'id' : IDL.Nat,
     'title' : IDL.Text,
     'creator' : IDL.Text,
     'description' : IDL.Text,
@@ -13,7 +14,8 @@ export const idlFactory = ({ IDL }) => {
         [],
         [],
       ),
-    'getAllPosts' : IDL.Func([], [IDL.Vec(Post)], ['query']),
+    'getAllPostSnapshots' : IDL.Func([], [IDL.Vec(PostSnapshot)], ['query']),
+    'likePost' : IDL.Func([IDL.Nat], [], []),
   });
 };
 export const init = ({ IDL }) => { return []; };
