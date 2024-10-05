@@ -2,7 +2,8 @@ import type { Principal } from '@dfinity/principal';
 import type { ActorMethod } from '@dfinity/agent';
 import type { IDL } from '@dfinity/candid';
 
-export interface Post {
+export interface PostSnapshot {
+  'id' : bigint,
   'title' : string,
   'creator' : string,
   'description' : string,
@@ -15,7 +16,8 @@ export interface _SERVICE {
     [Array<Uint8Array | number[]>, string, string, string],
     undefined
   >,
-  'getAllPosts' : ActorMethod<[], Array<Post>>,
+  'getAllPostSnapshots' : ActorMethod<[], Array<PostSnapshot>>,
+  'likePost' : ActorMethod<[bigint], undefined>,
 }
 export declare const idlFactory: IDL.InterfaceFactory;
 export declare const init: (args: { IDL: typeof IDL }) => IDL.Type[];
