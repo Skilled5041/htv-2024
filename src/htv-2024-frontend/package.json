@@ -7,7 +7,7 @@
     "setup": "npm i && dfx canister create htv-2024-backend && dfx generate htv-2024-backend && dfx deploy",
     "start": "vite --port 3000",
     "prebuild": "dfx generate",
-    "build:css": "tailwindcss -i ./src/index.css -o ./dist/output.css --minify",
+    "build:css": "tailwindcss -i ./src/index.css -o ./dist/output.css",
     "build": "tsc && vite build",
     "format": "prettier --write \"src/**/*.{json,js,jsx,ts,tsx,css,scss}\""
   },
