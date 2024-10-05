@@ -58,7 +58,7 @@ actor {
     };
 
 
-public query func getPostSnapshot (postId: Nat) : async PostSnapshot {
+    public query func getPostSnapshot (postId: Nat) : async PostSnapshot {
         let post : Post = postList[postId];
         let postSnapshot : PostSnapshot = {
             id = post.id;
@@ -71,7 +71,6 @@ public query func getPostSnapshot (postId: Nat) : async PostSnapshot {
         };
         return postSnapshot;
     };
-    
 
     public query func getAllPostSnapshots() : async [PostSnapshot] {
         // convert Post to PostSnapshot
