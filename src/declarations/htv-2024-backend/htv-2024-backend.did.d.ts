@@ -17,6 +17,7 @@ export interface _SERVICE {
     undefined
   >,
   'getAllPostSnapshots' : ActorMethod<[], Array<PostSnapshot>>,
+  'getPostSnapshot' : ActorMethod<[bigint], PostSnapshot>,
   'likePost' : ActorMethod<[bigint], undefined>,
 }
 export declare const idlFactory: IDL.InterfaceFactory;

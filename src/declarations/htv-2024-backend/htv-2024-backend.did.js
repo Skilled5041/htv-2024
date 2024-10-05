@@ -15,6 +15,7 @@ export const idlFactory = ({ IDL }) => {
         [],
       ),
     'getAllPostSnapshots' : IDL.Func([], [IDL.Vec(PostSnapshot)], ['query']),
+    'getPostSnapshot' : IDL.Func([IDL.Nat], [PostSnapshot], ['query']),
     'likePost' : IDL.Func([IDL.Nat], [], []),
   });
 };
