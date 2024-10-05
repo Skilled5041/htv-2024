@@ -1,3 +1,13 @@
+type Post = 
+ record {
+   creator: text;
+   description: text;
+   funding_amount: nat;
+   images: vec blob;
+   likes: nat;
+   title: text;
+ };
 service : {
-  greet: (text) -> (text) query;
+  createPost: (vec blob, text, text, text) -> ();
+  getAllPosts: () -> (vec Post) query;
 }

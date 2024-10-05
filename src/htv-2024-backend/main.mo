@@ -1,5 +1,5 @@
 import Array "mo:base/Array";
-actor Backend {
+actor {
     stable var postList : [Post] = [];
 
     type Post = {
