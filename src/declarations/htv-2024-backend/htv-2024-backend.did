@@ -10,6 +10,7 @@ type PostSnapshot =
  };
 service : {
   createPost: (vec blob, text, text, text) -> ();
+  editPost: (nat, opt text, opt text) -> ();
   getAllPostSnapshots: () -> (vec PostSnapshot) query;
   getPostSnapshot: (nat) -> (PostSnapshot) query;
   likePost: (nat) -> ();
