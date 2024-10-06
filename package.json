@@ -16,6 +16,7 @@
     "src/htv-2024-frontend"
   ],
   "dependencies": {
+    "@plisio/api-client": "^1.0.1",
     "react-router-dom": "^6.26.2"
   },
   "devDependencies": {

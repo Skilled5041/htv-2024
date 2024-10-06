@@ -1,20 +1,19 @@
 <script lang="ts">
-	import "../app.css";
+    import "../app.css";
 </script>
 
-<main>
-	<nav class="p-4 bg-slate-300">
-		<div>
-			<ul class="flex justify-end gap-7">
-				<li>
-					<a href="/home">Home</a>
-				</li>
-				<li>
-					<a href="/posts">Posts</a>
-				</li>
-			</ul>
-		</div>
-	</nav>
-</main>
 
-<slot />
+<nav class="p-6 bg-[#3B00B9]">
+    <div>
+        <ul class="flex justify-end gap-7 text-white">
+            <li>
+                <a class="text-xl" href="/home">Home</a>
+            </li>
+            <li>
+                <a class="text-xl" href="/posts">Posts</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<slot/>

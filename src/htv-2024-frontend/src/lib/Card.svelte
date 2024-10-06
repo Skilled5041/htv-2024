@@ -4,7 +4,7 @@
     export let imageURL = "/images/garden.jpg";
 </script>
 
-<main class="mt-8 ml-4 max-w-96 h-56 outline rounded-lg bg-slate-50">
+<main class="max-w-96 h-56 outline rounded-lg bg-slate-50">
     <img src={imageURL} alt="Card" class="w-full h-32 object-cover rounded-t-lg"/>
     <div class="flex items-center justify-between">
         <div>
