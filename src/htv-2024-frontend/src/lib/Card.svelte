@@ -4,19 +4,12 @@
     export let imageURL = "/images/garden.jpg";
 </script>
 
-<main class="max-w-96 h-56 outline rounded-lg bg-slate-50">
+<main class="max-w-96 h-56 outline outline-neutral-200 shadow-xl rounded-lg bg-slate-50 w-80 hover:scale-105 duration-300">
     <img src={imageURL} alt="Card" class="w-full h-32 object-cover rounded-t-lg"/>
     <div class="flex items-center justify-between">
         <div>
             <h3 class="ml-4 mt-4">{name}</h3>
             <h5 class="ml-4">{keywords}</h5>    
-        </div>
-        <div class="flex justify-center items-center h-16">
-            <span class="mr-10 dot text-2xl items-center">
-                <div class="ml-1.5">
-                    &rarr;
-                </div>
-            </span>
         </div>
     </div>
 </main>

@@ -4,15 +4,12 @@
 
 
 <nav class="p-6 bg-[#3B00B9]">
-    <div>
-        <ul class="flex justify-end gap-7 text-white">
-            <li>
-                <a class="text-xl" href="/home">Home</a>
-            </li>
-            <li>
-                <a class="text-xl" href="/posts">Posts</a>
-            </li>
-        </ul>
+    <div class="flex justify-between">
+        <a class="text-4xl text-white text-center" href="/posts/new">+</a>
+        <div class="flex gap-7 text-white">
+            <a class="text-xl" href="/home">Home</a>
+            <a class="text-xl " href="/posts">Posts</a>
+        </div>
     </div>
 </nav>
 

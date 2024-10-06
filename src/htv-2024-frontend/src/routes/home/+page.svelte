@@ -31,7 +31,7 @@
 </script>
 
 <div class="flex flex-col items-center">
-    <div class="grid ml-20 mr-20 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+    <div class="grid ml-24 mt-24 mr-24 gap-12 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
         {#each cardData as card (card.name)}
             <Card
                     name={card.name}
