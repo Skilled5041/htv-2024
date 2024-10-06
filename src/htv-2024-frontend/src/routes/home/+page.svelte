@@ -1,42 +1,21 @@
 <script>
     import Card from "$lib/Card.svelte";
+    import { backend } from "$lib/canisters";
 
-    const cardData = [
-        {
-            "name": "Ava Rivera",
-            "keywords": "Building Community Gardens",
-            "imageURL": "/images/garden.jpg"
-        },
-        {
-            "name": "John Doe",
-            "keywords": "Travelling to All 7 Continents",
-            "imageURL": "/images/travel.jpeg"
-        },
-        {
-            "name": "Jordan Bellamy",
-            "keywords": "Reunite with Mom",
-            "imageURL": "/images/reunite.jpg"
-        },
-        {
-            "name": "Jane Smith",
-            "keywords": "Open a Michelin Star Restaurant",
-            "imageURL": "/images/michelin.jpg"
-        },
-        {
-            "name": "Mary White",
-            "keywords": "Go on an exchange",
-            "imageURL": "/images/exchange.jpeg"
-        },
-    ];
+    let cardData = []
+    const fetchCards = async () => {
+        // cardData = await backend.getAllPostSnapshots();
+    }
+    // fetchCards();
 </script>
 
 <div class="flex flex-col items-center">
     <div class="grid ml-24 mt-24 mr-24 gap-12 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
         {#each cardData as card (card.name)}
             <Card
-                    name={card.name}
-                    keywords={card.keywords}
-                    imageURL={card.imageURL}
+                    name={card.title}
+                    keywords={card.description.substring(0, 25).concat("...")}
+                    imageURL={URL.createObjectURL(card.images[0])}
             />
         {/each}
     </div>
