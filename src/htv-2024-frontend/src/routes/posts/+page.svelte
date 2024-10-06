@@ -1,5 +1,5 @@
-<script lang="ts">
-    import banner from "$lib/images/banner.jpg";
+<script>
+    import banner from "$lib/images/banner.png";
     import { Confetti } from "svelte-confetti";
     // TODO use query params
     const getImages = async () => {
@@ -21,6 +21,19 @@
         liked = !liked;
         console.log(liked);
     };
+
+    const randomInt = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
+    const donate = async () => {
+        const params = {
+            to: "ihovz-53no2-jqaqf-icq4w-p6sbe-3h2su-arbtr-uzhl6-tatbq-g527g-wqe",
+            amount: 2_000_000,
+            memo: "123451231231",
+        };
+        const result = await window.ic.plug.requestTransfer(params).catch((err) => {
+            console.error(err);
+        });
+        console.log(result);
+    };
 </script>
 
 <div>
@@ -28,18 +41,19 @@
     <div class="flex w-full min-h-[80vh]">
         <div class="w-[75%] flex flex-col items-center p-4">
             <h1 class="text-center pt-16 text-6xl max-w-[65%] font-semibold leading-normal">{postInfo.title}</h1>
-            {#await postInfo.images[0]}
-                <p>Loading...</p>
-            {:then image}
-                <img src={image} alt="Post Image"
-                     class="w-1/2 max-w-screen-lg h-auto object-cover object-center pt-36"/>
-            {:catch error}
-                <p>{error.message}</p>
-            {/await}
+            <!--{#await postInfo.images[0]}-->
+            <!--    <p>Loading...</p>-->
+            <!--{:then image}-->
+            <!--    <img src="todo fix" alt="Post Image"-->
+            <!--         class="w-1/2 max-w-screen-lg h-auto object-cover object-center pt-36"/>-->
+            <!--{:catch error}-->
+            <!--    <p>{error.message}</p>-->
+            <!--{/await}-->
             <p class="w-[50%] text-2xl pt-16 leading-10">{postInfo.description}</p>
         </div>
         <div class="border-l-2 border-neutral-200 p-4 flex flex-col items-center w-[25%]">
-            <button class="text-3xl mt-16 bg-[#3B00B9] text-white p-4 rounded-2xl hover:bg-[#2f0785] hover:scale-110 duration-200">
+            <button class="text-3xl mt-16 bg-[#3B00B9] text-white p-4 rounded-2xl hover:bg-[#2f0785] hover:scale-110 duration-200"
+                    on:click={donate}>
                 Support
             </button>
             <div class="flex">
