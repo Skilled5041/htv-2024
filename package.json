@@ -17,5 +17,8 @@
   ],
   "dependencies": {
     "react-router-dom": "^6.26.2"
+  },
+  "devDependencies": {
+    "svelte-confetti": "^1.4.0"
   }
 }
