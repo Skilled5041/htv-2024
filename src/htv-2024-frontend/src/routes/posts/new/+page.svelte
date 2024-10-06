@@ -1,5 +1,6 @@
 <script>
     import { backend } from "$lib/canisters";
+    import { goto } from "$app/navigation";
 
     let fileInput;
 
@@ -9,6 +10,7 @@
         const arrayBuffer = await file.arrayBuffer();
         const uint8Array = new Uint8Array(arrayBuffer);
         await backend.createPost([uint8Array], event.target.title.value, event.target.description.value, event.target.fname.value, event.target["ltc-wallet"].value);
+        goto("/home");
     }
 </script>
 

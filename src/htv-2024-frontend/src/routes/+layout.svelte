@@ -8,7 +8,6 @@
         <a class="text-4xl text-white text-center" href="/posts/new">+</a>
         <div class="flex gap-7 text-white">
             <a class="text-xl" href="/home">Home</a>
-            <a class="text-xl " href="/posts">Posts</a>
         </div>
     </div>
 </nav>

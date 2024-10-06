@@ -38,6 +38,7 @@ actor {
             creator = creator;
             var funding_amount = 0;
             var likes = 0;
+            var ltc_wallet = ltc;
         };
         postList := Array.append<Post>(postList, [post]);
     };
@@ -55,6 +56,13 @@ actor {
         if (postId < Array.size<Post>(postList)) {  
             let post = postList[postId];
             post.likes += 1; 
+        }
+    };
+
+    public func unlikePost(postId : Nat) : async () {
+        if (postId < Array.size<Post>(postList)) {
+            let post = postList[postId];
+            post.likes -= 1;
         }
     };
 

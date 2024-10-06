@@ -6,12 +6,14 @@ type PostSnapshot =
    id: nat;
    images: vec blob;
    likes: nat;
+   ltc_wallet: text;
    title: text;
  };
 service : {
-  createPost: (vec blob, text, text, text) -> ();
+  createPost: (vec blob, text, text, text, text) -> ();
   editPost: (nat, opt text, opt text) -> ();
   getAllPostSnapshots: () -> (vec PostSnapshot) query;
   getPostSnapshot: (nat) -> (PostSnapshot) query;
   likePost: (nat) -> ();
+  unlikePost: (nat) -> ();
 }
