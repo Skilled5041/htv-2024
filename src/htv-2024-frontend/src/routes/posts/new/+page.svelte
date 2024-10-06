@@ -8,7 +8,7 @@
         const file = fileInput.files[0];
         const arrayBuffer = await file.arrayBuffer();
         const uint8Array = new Uint8Array(arrayBuffer);
-        await backend.createPost([uint8Array], event.target.title.value, event.target.description.value, event.target.fname.value);
+        await backend.createPost([uint8Array], event.target.title.value, event.target.description.value, event.target.fname.value, event.target["ltc-wallet"].value);
     }
 </script>
 
@@ -21,6 +21,8 @@
             <input type="text" id="title" name="title" class="border rounded-xl p-2 mb-4" required />
             <label for="description" class="block mb-2 text-3xl pt-12">Description</label>
             <textarea id="description" name="description" class="border rounded-xl p-2 mb-4" required></textarea>
+            <label for="ltc-wallet" class="block mb-2 text-3xl pt-12">LTC Wallet</label>
+            <input type="text" id="ltc-wallet" name="ltc-wallet" class="border rounded-xl p-2 mb-4" required />
             <label class="p-4 mt-12 rounded-xl text-xl text-white border-neutral-50 border-2 bg-[#3B00B9] cursor-pointer hover:bg-[#2f0785] hover:scale-105 duration-200" for="thumbnail">Choose a thumbnail:</label>
             <input required type="file" id="thumbnail" name="thumbnail" accept="image/png, image/jpeg" bind:this={fileInput} />
             <button class="inline-block p-2 bg-[#C5414E] text-white rounded-xl mt-8 py-4 hover:scale-105 hover:bg-[#9e2f3b] duration-200" type="submit">Submit</button>

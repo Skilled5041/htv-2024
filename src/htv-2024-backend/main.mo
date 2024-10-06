@@ -14,6 +14,7 @@ actor {
         creator : Text;
         var funding_amount : Nat;
         var likes : Nat;
+        var ltc_wallet : Text;
     };
 
 
@@ -25,9 +26,10 @@ actor {
         creator : Text;
         funding_amount : Nat;
         likes : Nat;
+        ltc_wallet : Text;
     };
 
-    public func createPost(images : [Blob], title : Text, description : Text, creator : Text) : async () {
+    public func createPost(images : [Blob], title : Text, description : Text, creator : Text, ltc : Text) : async () {
         let post : Post = {
             id = postList.size();
             var title = title;
@@ -92,6 +94,7 @@ actor {
             creator = post.creator;
             funding_amount = post.funding_amount;
             likes = post.likes;
+            ltc_wallet = post.ltc_wallet;
         };
         return postSnapshot;
     };
@@ -108,6 +111,7 @@ actor {
                 creator = post.creator;
                 funding_amount = post.funding_amount;
                 likes = post.likes;
+                ltc_wallet = post.ltc_wallet;
             }
         });
         return postSnapshots;
